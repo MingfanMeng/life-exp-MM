@@ -47,6 +47,6 @@ head(gapminder)
 gapminder %>%
   group_by(year) %>%
   filter(lifeExp == max(lifeExp)) %>%
-  arrange(year)
+  arrange(desc(year))
 ```
 
