@@ -35,3 +35,18 @@ Here is another line
 summary statistics
 
 what is the more things
+
+
+```{r}
+library(gapminder)
+library(tidyverse)
+gpminder <- data("gapminder_unfiltered")
+head(gapminder)
+```
+```{r}
+gapminder %>%
+  group_by(year) %>%
+  filter(lifeExp == max(lifeExp)) %>%
+  arrange(year)
+```
+
